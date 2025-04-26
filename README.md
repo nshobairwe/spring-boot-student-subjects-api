@@ -1,11 +1,16 @@
+Here’s the **modified and clean** version of your `README.md`:
+
+---
+
 # spring-boot-students-subjects-api
 
-A Spring Boot REST API to manage students and subjects.
+A Spring Boot REST API to manage students and subjects, now with Docker support.
 
 ## Features
-- Retrieves a list of students with their enrolled programs.
-- Retrieves subjects for the Software Engineering program (Years 1-4).
-- Uses Spring Boot, MySQL, and JPA for database management.
+- Retrieve a list of students with their enrolled programs.
+- Retrieve subjects for the Software Engineering program (Years 1–4).
+- Use Spring Boot, MySQL, and JPA for database management.
+- Dockerized for easy containerized deployment.
 
 ## Setup Instructions
 
@@ -13,17 +18,40 @@ A Spring Boot REST API to manage students and subjects.
 - Java 17+
 - Maven
 - MySQL
+- Docker & Docker Compose
 - Git
 
 ### Installation
 1. Clone the repository:
-   ```sh
+   ```bash
    git clone https://github.com/your-username/spring-boot-students-api.git
    cd spring-boot-students-api
-   
-### Three Bash scripts to manage AWS Ubuntu server hosting the API
-1. Server Health Check Script(health_check.sh) - Purpose: Monitor server resource usage and API status.
-2. Backup Script( backup_api.sh) -  Purpose : Create a backup of your API project files and database.
-3. Update Script (update_server.sh) - Purpose: Automate server and API updates.
+   ```
+
+### Running with Docker
+1. Build and start the containers:
+   ```bash
+   docker-compose up --build
+   ```
+
+2. View container logs:
+   ```bash
+   docker logs <container_name> > docker_logs.txt
+   ```
+
+3. Push Docker images to Docker Hub (optional):
+   ```bash
+   docker push your-dockerhub-username/demo-api
+   ```
+### Server Management Scripts for AWS Ubuntu Server
+1. `health_check.sh` — Monitor server resource usage and API status.
+2. `backup_api.sh` — Backup API project files and database.
+3. `update_server.sh` — Automate server and API updates.
+
+### Files Added
+- `Dockerfile` — Defines how the Spring Boot API container is built.
+- `docker-compose.yml` — Orchestrates the API and MySQL containers.
+- `docker_logs.txt` — Example log output captured from running containers.
+
 
 
