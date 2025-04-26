@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class SubjectController {
+    
     private final SubjectService subjectService;
 
     public SubjectController(SubjectService subjectService) {
